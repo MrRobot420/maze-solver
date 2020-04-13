@@ -25,30 +25,17 @@ class Maze:
 
 
     def drawMaze(self, maze):
-        # Row = top to bottom
-        for v_index, row in maze.iterrows():
-            print('Row: %s' % str(row))
-            # Col = left to right
-            for index, col in enumerate(row):
-                print('TYPE: %s' % str(col))
+        for v_index, row in maze.iterrows():        # Row = top to bottom
+            for index, col in enumerate(row):       # Col = left to right
+                position = { 'x': index, 'y': v_index }
 
                 if col == 'b':
-                    #draw black
-                    position = { 'x': index, 'y': v_index }
-                    new_square = sq(position, { 'x':64, 'y': 64 }, (0,0,0))
-                    new_square.drawSquare(self.SCREEN)
+                    new_square = sq(position, { 'x':64, 'y': 64 }, (0,0,0))             #draw black
                 elif col == 'w':
-                    #draw white
-                    position = { 'x': index, 'y': v_index }
-                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,255,255))
-                    new_square.drawSquare(self.SCREEN)
+                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,255,255))       #draw white
                 elif col == 's':
-                    # draw orange
-                    position = { 'x': index, 'y': v_index }
-                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,165,0))
-                    new_square.drawSquare(self.SCREEN)
+                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,165,0))         # draw orange
                 elif col == 'e':
-                    # draw yellow
-                    position = { 'x': index, 'y': v_index }
-                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,215,0))
-                    new_square.drawSquare(self.SCREEN)
+                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,215,0))         # draw yellow
+                
+                new_square.drawSquare(self.SCREEN)
