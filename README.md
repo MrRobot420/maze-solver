@@ -1,4 +1,6 @@
-# This program is trying to solve mazes.
+# MAZE SOLVER
+
+# This program is solving mazes.
 
 # IDEAS:
 
@@ -6,14 +8,14 @@
 
 # EXAMPLE:
 
-[b][s][b][b][b][b][b][b]
-[b][w][w][w][w][w][w][b]
-[b][b][w][b][w][b][w][b]
-[b][b][w][b][b][b][b][b]
-[b][w][w][w][w][w][w][b]
-[b][w][b][b][w][b][w][b]
-[b][w][b][b][w][w][w][b]
-[b][b][b][b][b][e][b][b]
+[b][s][b][b][b][b][b][b]\
+[b][w][w][w][w][w][w][b]\
+[b][b][w][b][w][b][w][b]\
+[b][b][w][b][b][b][b][b]\
+[b][w][w][w][w][w][w][b]\
+[b][w][b][b][w][b][w][b]\
+[b][w][b][b][w][w][w][b]\
+[b][b][b][b][b][e][b][b]\
 
 # MEANING:
 
