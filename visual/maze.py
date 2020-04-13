@@ -1,15 +1,17 @@
 import sys, pygame
 import pandas as pd
-import square
+from square import Square as sq
 
 pygame.init()
 
 class Maze:
+    SCREEN = None
     SQUARE_SIZE = 0
     TOTAL_SIZE = { 'x': 0, 'y': 0 }
     DIMENSIONS = { 'x': 0, 'y': 0 }
 
-    def __init__(self, size, square_size, dimensions):
+    def __init__(self, screen, size, square_size, dimensions):
+        self.SCREEN = screen
         self.TOTAL_SIZE = size
         self.SQUARE_SIZE = square_size
         self.DIMENSIONS = dimensions
@@ -27,18 +29,26 @@ class Maze:
         for v_index, row in maze.iterrows():
             print('Row: %s' % str(row))
             # Col = left to right
-            for col in row:
+            for index, col in enumerate(row):
                 print('TYPE: %s' % str(col))
 
                 if col == 'b':
                     #draw black
-                    pass
+                    position = { 'x': index, 'y': v_index }
+                    new_square = sq(position, { 'x':64, 'y': 64 }, (0,0,0))
+                    new_square.drawSquare(self.SCREEN)
                 elif col == 'w':
                     #draw white
-                    pass
+                    position = { 'x': index, 'y': v_index }
+                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,255,255))
+                    new_square.drawSquare(self.SCREEN)
                 elif col == 's':
                     # draw orange
-                    pass
+                    position = { 'x': index, 'y': v_index }
+                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,165,0))
+                    new_square.drawSquare(self.SCREEN)
                 elif col == 'e':
                     # draw yellow
-                    pass
+                    position = { 'x': index, 'y': v_index }
+                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,215,0))
+                    new_square.drawSquare(self.SCREEN)
