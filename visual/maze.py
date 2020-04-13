@@ -1,33 +1,22 @@
 import sys, pygame
 
 pygame.init()
-size = width, height = 512, 512
-speed = [2, 0]                              # one has to be zero in order for it to move: left, right, top, down
-black = 0, 0, 0
-screen = pygame.display.set_mode(size)
+
+class Maze:
+    SQUARE_SIZE = 0
+    TOTAL_SIZE = { 'x': 0, 'y': 0 }
+    DIMENSIONS = { 'x': 0, 'y': 0 }
+
+    def __init__(self, size, square_size, dimensions):
+        self.TOTAL_SIZE = size
+        self.SQUARE_SIZE = square_size
+        self.DIMENSIONS = dimensions
+        print('CREATED NEW MAZE WITH: \nTOTAL_SIZE: \t%s\nSQUARE_SIZE: \t%s\nSQUARE_SIZE: \t%s' % (str(self.TOTAL_SIZE), str(self.SQUARE_SIZE), str(self.DIMENSIONS)))
 
 
-def drawMaze():
-    pass
+    def loadMaze(self, path):
+        pass
 
 
-def startGameLoop():
-    # mouse = pygame.draw.rect(screen, (0,255,0), )
-    mouse = pygame.Rect((0,0), (64, 64))
-    while 1:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT: sys.exit()
-
-        mouse = mouse.move(speed)
-        if mouse.left < 0 or mouse.right > width:
-            speed[0] = -speed[0]
-        if mouse.top < 0 or mouse.bottom > height:
-            speed[1] = -speed[1]
-
-        screen.fill(black)
-        pygame.draw.rect(screen, (0,255,0), mouse)
-        # screen.blit(screen, mouse)
-        pygame.display.flip()
-
-
-startGameLoop()
+    def drawMaze(self, maze):
+        pass
