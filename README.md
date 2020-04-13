@@ -1,12 +1,12 @@
 # MAZE SOLVER
 
-# This program is solving mazes.
+## This program is solving mazes.
 
-# IDEAS:
+## IDEAS:
 
 - Load maze into 2D Array [8][8]
 
-# EXAMPLE:
+## EXAMPLE:
 
 [O][S][O][O][O][O][O][O]\
 [O][I][N][I][N][I][N][O]\
@@ -15,9 +15,9 @@
 [O][N][N][I][N][I][N][O]\
 [O][I][O][O][I][O][I][O]\
 [O][X][O][O][N][N][N][O]\
-[O][O][O][O][O][E][O][O]\
+[O][O][O][O][O][E][O][O]
 
-# MEANING:
+## MEANING:
 
 - b = black
 - w = white
@@ -27,7 +27,7 @@
 - d = dead  --> A point that has no possibility (dead end)
 
 
-# FLOW:
+## FLOW:
 
 - Program will begin @start and search the @end of the maze.
 - Will thereby mark @nodes & @deadends
