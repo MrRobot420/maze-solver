@@ -11,7 +11,7 @@ da_maze = ''
 
 
 def createMaze():
-    da_maze = mz(screen, maze_size, { 'x': 32, 'y': 32 }, { 'x': 8, 'y': 8})
+    da_maze = mz(screen, maze_size, { 'x': 32, 'y': 32 }, { 'x': 16, 'y': 16})
     return da_maze
 
 
