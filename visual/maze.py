@@ -23,6 +23,10 @@ class Maze:
         print(maze_df)
         return maze_df
 
+    
+    def createSquare(self, position, color):
+        return sq(position, { 'x':64, 'y': 64 }, color)
+
 
     def drawMaze(self, maze):
         for v_index, row in maze.iterrows():        # Row = top to bottom
@@ -30,12 +34,12 @@ class Maze:
                 position = { 'x': index, 'y': v_index }
 
                 if col == 'b':
-                    new_square = sq(position, { 'x':64, 'y': 64 }, (0,0,0))             #draw black
+                    new_square = self.createSquare(position, (0,0,0))             # draw black
                 elif col == 'w':
-                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,255,255))       #draw white
+                    new_square = self.createSquare(position, (255,255,255))       # draw white
                 elif col == 's':
-                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,165,0))         # draw orange
+                    new_square = self.createSquare(position, (255,165,0))         # draw orange
                 elif col == 'e':
-                    new_square = sq(position, { 'x':64, 'y': 64 }, (255,215,0))         # draw yellow
+                    new_square = self.createSquare(position, (255,215,0))         # draw yellow
                 
                 new_square.drawSquare(self.SCREEN)
