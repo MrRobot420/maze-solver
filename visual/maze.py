@@ -7,8 +7,8 @@ pygame.init()
 class Maze:
     SCREEN = None
     SQUARE_SIZE = 0
-    TOTAL_SIZE = { 'x': 0, 'y': 0 }
-    DIMENSIONS = { 'x': 0, 'y': 0 }
+    TOTAL_SIZE = { 'x': 64, 'y': 64 }
+    DIMENSIONS = { 'x': 8, 'y': 8 }
 
     def __init__(self, screen, size, square_size, dimensions):
         self.SCREEN = screen
@@ -25,7 +25,7 @@ class Maze:
 
     
     def createSquare(self, position, color):
-        return sq(position, { 'x':64, 'y': 64 }, color)
+        return sq(position, self.SQUARE_SIZE, color)
 
 
     def drawMaze(self, maze):

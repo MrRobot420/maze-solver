@@ -11,7 +11,7 @@ da_maze = ''
 
 
 def createMaze():
-    da_maze = mz(screen, maze_size, { 'x': 64, 'y': 64 }, { 'x': 8, 'y': 8})
+    da_maze = mz(screen, maze_size, { 'x': 32, 'y': 32 }, { 'x': 8, 'y': 8})
     return da_maze
 
 
@@ -22,7 +22,7 @@ def loadMaze(new_maze, path):
 
 def startLoop():
     new_maze = createMaze()
-    maze_layout = loadMaze(new_maze, '../examples/maze2.csv')
+    maze_layout = loadMaze(new_maze, '../examples/maze3.csv')
     new_maze.drawMaze(maze_layout)
 
     
