@@ -36,6 +36,7 @@ def startLoop():
 
     maze_solver = solve(maze_layout)    # JUST for init
     starting_point = maze_solver.findStartingPoint(maze_layout)
+    ending_point = maze_solver.findEndingPoint(maze_layout)
     last_position = starting_point
     visited = []
 
@@ -48,18 +49,29 @@ def startLoop():
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
 
-        visited.append(maze_solver.LAST)
-        next_position = maze_solver.findNextPosition(maze_solver.CURRENT, maze_layout, robot, visited)
-        time.sleep(0.15)
-        last_position = maze_solver.CURRENT
-        maze_solver.LAST = last_position
-        robot.move(maze_solver.LAST, next_position)
-        
-        maze_solver.CURRENT = next_position
-        
+        if (maze_solver.CURRENT != ending_point):
+            visited.append(maze_solver.LAST)
+            next_position = maze_solver.findNextPosition(maze_solver.CURRENT, maze_layout, robot, visited)
+            time.sleep(0.5)
+            last_position = maze_solver.CURRENT
+            maze_solver.LAST = last_position
+            robot.move(maze_solver.LAST, next_position)
+
+            maze_solver.CURRENT = next_position
+
+        elif (maze_solver.CURRENT == ending_point):
+            screen.fill(black)
+            myfont = pygame.font.SysFont("Comic Sans MS", 30)
+            label = myfont.render("YOU WON!", 1, (240, 255, 0))
+            screen.blit(label, (256, 256))
+            pygame.display.flip()
+            time.sleep(3)
+            break
+
 
         # screen.fill(black)
         pygame.display.flip()
+    
 
 
 startLoop()

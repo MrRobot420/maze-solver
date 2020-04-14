@@ -26,6 +26,18 @@ class Solver:
         print("Found start at: %s" % str(start))
         return start
 
+    
+    def findEndingPoint(self, layout):
+        end = (0,0)
+        for v_index, row in layout.iterrows():          # Row = top to bottom
+            for index, col in enumerate(row):           # Col = left to right
+                if col == 'e':
+                    end = ((index * 32) + 16, (v_index * 32) + 16)
+                    break
+
+        print("Found end at: %s" % str(end))
+        return end
+
 
     def checkEnvironment(self, old, layout, robot):
         index = (int((old[0] - 16) / 32), int((old[1] - 16) / 32))
@@ -57,10 +69,10 @@ class Solver:
         # environment = ('b', 'b', 'b', 'w')
         environment = self.checkEnvironment(old, layout, robot)        # returns stuff of line above
         current_direction = robot.DIRECTION
-        left_is_free = environment[0] == 'w'
-        above_is_free = environment[1] == 'w'
-        right_is_free = environment[2] == 'w'
-        below_is_free = environment[3] == 'w'
+        left_is_free = environment[0] == 'w' or environment[0] == 'e'
+        above_is_free = environment[1] == 'w' or environment[1] == 'e'
+        right_is_free = environment[2] == 'w' or environment[2] == 'e'
+        below_is_free = environment[3] == 'w' or environment[3] == 'e'
         # need to also check if point already visited!
 
 
