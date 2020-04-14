@@ -19,7 +19,7 @@ class Square:
         self.END_POINT['y'] = (position['y'] + 1) * dimensions['y']
         self.END_POINT['x'] = (position['x'] + 1) * dimensions['x']
 
-        print('CREATED NEW SQUARE WITH: \nPOSITION: \t%s\DIMENSIONS: \t%s\COLOR: \t%s\n\n' % (str(self.POSITION), str(self.DIMENSIONS), str(self.COLOR)))
+        # print('CREATED NEW SQUARE WITH: \nPOSITION: \t%s\DIMENSIONS: \t%s\COLOR: \t%s\n\n' % (str(self.POSITION), str(self.DIMENSIONS), str(self.COLOR)))
 
 
     def drawSquare(self, screen):

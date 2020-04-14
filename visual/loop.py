@@ -11,7 +11,7 @@ da_maze = ''
 
 
 def createMaze():
-    da_maze = mz(screen, maze_size, { 'x': 64, 'y': 64 }, { 'x': 8, 'y': 8})
+    da_maze = mz(screen, maze_size, { 'x': 32, 'y': 32 }, { 'x': 16, 'y': 16})
     return da_maze
 
 
@@ -22,8 +22,7 @@ def loadMaze(new_maze, path):
 
 def startLoop():
     new_maze = createMaze()
-    maze_layout = loadMaze(new_maze, '../examples/maze.csv')
-    mouse = pygame.Rect((0,0), (64, 64))
+    maze_layout = loadMaze(new_maze, '../examples/maze3.csv')
     new_maze.drawMaze(maze_layout)
 
     
@@ -31,17 +30,7 @@ def startLoop():
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
 
-        # new_maze.drawMaze(maze_layout)
-        # new_maze.drawMaze(maze_layout)
-
-        # mouse = mouse.move(speed)
-        # if mouse.left < 0 or mouse.right > width:
-        #     speed[0] = -speed[0]
-        # if mouse.top < 0 or mouse.bottom > height:
-        #     speed[1] = -speed[1]
-
         # screen.fill(black)
-        # pygame.draw.rect(screen, (0,255,0), mouse)
         pygame.display.flip()
 
 
