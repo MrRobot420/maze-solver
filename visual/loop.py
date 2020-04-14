@@ -1,5 +1,6 @@
 import sys, pygame
 from maze import Maze as mz
+from robot import Robot as robo
 
 pygame.init()
 size = width, height = 512, 512
@@ -15,6 +16,11 @@ def createMaze():
     return da_maze
 
 
+def createRobot():
+    da_robot = robo(screen, (0,255,0), (48,16), 16, 'bottom')
+    return da_robot
+
+
 def loadMaze(new_maze, path):
     loaded_maze = new_maze.loadMaze(path)
     return loaded_maze
@@ -24,6 +30,8 @@ def startLoop():
     new_maze = createMaze()
     maze_layout = loadMaze(new_maze, '../examples/maze3.csv')
     new_maze.drawMaze(maze_layout)
+    robot = createRobot()
+    robot.drawRobot()
 
     
     while 1:
