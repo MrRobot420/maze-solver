@@ -63,7 +63,7 @@ def startLoop():
             screen.fill(black)
             myfont = pygame.font.SysFont("Comic Sans MS", 30)
             label = myfont.render("YOU WON!", 1, (240, 255, 0))
-            screen.blit(label, (256, 256))
+            screen.blit(label, (210, 226))
             pygame.display.flip()
             time.sleep(3)
             break
