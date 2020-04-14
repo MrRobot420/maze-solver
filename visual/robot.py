@@ -17,5 +17,10 @@ class Robot:
 
     
     def drawRobot(self):
-        # player = pygame.Circle()
         pygame.draw.circle(self.SCREEN, self.COLOR, self.POSITION, self.RADIUS)
+
+    
+    def move(self, new_position):
+        pygame.draw.circle(self.SCREEN, (255,255,255), self.POSITION, self.RADIUS)
+        pygame.draw.circle(self.SCREEN, (0,255,0), new_position, self.RADIUS)
+        self.POSITION = new_position
