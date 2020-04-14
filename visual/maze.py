@@ -15,7 +15,7 @@ class Maze:
         self.TOTAL_SIZE = size
         self.SQUARE_SIZE = square_size
         self.DIMENSIONS = dimensions
-        print('CREATED NEW MAZE WITH: \nTOTAL_SIZE: \t%s\nSQUARE_SIZE: \t%s\nSQUARE_SIZE: \t%s\n\n' % (str(self.TOTAL_SIZE), str(self.SQUARE_SIZE), str(self.DIMENSIONS)))
+        print('CREATED NEW MAZE WITH: \nTOTAL_SIZE: \t%s\nSQUARE_SIZE: \t%s\nMAZE_SIZE: \t%s\n\n' % (str(self.TOTAL_SIZE), str(self.SQUARE_SIZE), str(self.DIMENSIONS)))
 
 
     def loadMaze(self, path):
