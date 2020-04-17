@@ -8,14 +8,22 @@
 
 ## EXAMPLE:
 
-[O][S][O][O][O][O][O][O]\
-[O][I][N][I][N][I][N][O]\
-[O][O][I][O][X][O][X][O]\
-[O][O][I][O][O][O][O][O]\
-[O][N][N][I][N][I][N][O]\
-[O][I][O][O][I][O][I][O]\
-[O][X][O][O][N][N][N][O]\
-[O][O][O][O][O][E][O][O]
+b,s,b,b,b,b,b,b,b,b,b,b,b,b,b,b\
+b,w,w,w,w,w,w,w,w,w,w,w,w,w,w,b\
+b,b,w,b,w,b,w,b,b,b,w,b,w,b,w,b\
+b,b,w,b,b,b,w,b,w,b,w,b,b,b,w,b\
+b,w,w,w,w,w,w,w,w,w,w,w,w,b,w,b\
+b,w,b,b,w,b,b,b,b,w,b,b,w,w,w,b\
+b,w,w,b,w,w,w,w,b,w,w,b,w,b,b,b\
+b,b,b,b,b,b,b,w,b,w,b,w,w,b,w,b\
+b,w,b,w,b,w,b,w,b,b,b,b,w,b,w,b\
+b,w,w,w,w,w,w,w,b,w,w,w,w,w,w,b\
+b,b,w,b,w,b,w,b,b,b,w,b,w,b,w,b\
+b,b,w,b,b,b,b,b,w,b,w,b,b,b,w,b\
+b,w,w,w,w,w,w,w,w,w,w,w,w,w,w,b\
+b,w,b,b,w,b,b,w,w,w,b,b,w,b,b,b\
+b,w,w,w,w,w,w,w,b,w,b,w,w,w,w,b\
+b,b,b,b,b,b,b,b,b,e,b,b,b,b,b,b
 
 ## MEANING:
 

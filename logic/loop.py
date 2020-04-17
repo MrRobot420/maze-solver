@@ -52,7 +52,7 @@ def startLoop():
         if (maze_solver.CURRENT != ending_point):
             visited.append(maze_solver.LAST)
             next_position = maze_solver.findNextPosition(maze_solver.CURRENT, maze_layout, robot, visited)
-            time.sleep(0.5)
+            time.sleep(0.25)
             last_position = maze_solver.CURRENT
             maze_solver.LAST = last_position
             robot.move(maze_solver.LAST, next_position)
@@ -62,8 +62,8 @@ def startLoop():
         elif (maze_solver.CURRENT == ending_point):
             screen.fill(black)
             myfont = pygame.font.SysFont("Comic Sans MS", 30)
-            label = myfont.render("YOU WON!", 1, (240, 255, 0))
-            screen.blit(label, (210, 226))
+            label = myfont.render("TARGET FOUND!", 1, (240, 255, 0))
+            screen.blit(label, (180, 226))
             pygame.display.flip()
             time.sleep(3)
             break
